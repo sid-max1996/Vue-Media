@@ -1,0 +1,30 @@
+<div class="container admin">
+    <div class="row">
+        <div class="col-sm">
+            <input ref="img" type="file" accept=".png, .jpg, .jpeg">
+            <button @click="addContent('img')" type="button" class="btn btn-primary btn-sm add-btn">Добавить Фото</button>
+        </div>
+        <div class="col-sm">
+            <input ref="audio" type="file" accept=".mp3">
+            <button @click="addContent('audio')" type="button" class="btn btn-primary btn-sm add-btn">Добавить Музыку</button>
+        </div>
+        <div class="col-sm">
+            <input ref="video" type="file" accept=".mp4">
+            <button @click="addContent('video')" type="button" class="btn btn-primary btn-sm add-btn">Добавить Видео</button>
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <draggable v-model='contents' class="contents">
+        <div v-for="(content, ind) in contents" class="row content offset-sm-4">
+            {{content.type + " - " + content.name}}
+            <a class="btn btn-sm btn-danger rem-btn" @click="removeContent(ind)">Удалить</a>
+        </div>
+    </draggable>
+    <!-- <div class="container contents">
+        <div v-for="(content, ind) in contents" class="row content offset-sm-4" draggable='true' @ondragstart="dragStart($event)">
+            {{content.type + " - " + content.name}}
+            <a class="btn btn-sm btn-danger rem-btn" @click="removeContent(ind)">Удалить</a>
+        </div>
+    </div> -->
+</div>

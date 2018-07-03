@@ -1,0 +1,24 @@
+.add-btn {
+    margin-top: 7px;
+    margin-left: calc(25%);
+}
+
+.rem-btn {
+    margin-left: 2px;
+}
+
+.admin {
+    margin-top: 20px;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.contents {
+    margin-top: 40px !important;
+}
+
+.center {
+    margin-left: calc(25%);
+}
