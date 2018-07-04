@@ -1,5 +1,5 @@
 <div class="container contents">
-    <div v-for="content in contents" class="row offset-sm-3 content">
+    <div v-for="content in contents" class="row justify-content-center content">
         <ImageB64 :path="content.path" v-if="content.type=='img'"></ImageB64>
         <AudioB64 :path="content.path" v-else-if="content.type=='audio'"></AudioB64>
         <VideoB64 :path="content.path" v-else-if="content.type=='video'"></VideoB64>

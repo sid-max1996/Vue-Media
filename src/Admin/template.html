@@ -16,15 +16,9 @@
     <div class="row">
     </div>
     <draggable v-model='contents' class="contents">
-        <div v-for="(content, ind) in contents" class="row content offset-sm-4">
+        <div v-for="(content, ind) in contents" class="row content justify-content-center">
             {{content.type + " - " + content.name}}
             <a class="btn btn-sm btn-danger rem-btn" @click="removeContent(ind)">Удалить</a>
         </div>
     </draggable>
-    <!-- <div class="container contents">
-        <div v-for="(content, ind) in contents" class="row content offset-sm-4" draggable='true' @ondragstart="dragStart($event)">
-            {{content.type + " - " + content.name}}
-            <a class="btn btn-sm btn-danger rem-btn" @click="removeContent(ind)">Удалить</a>
-        </div>
-    </div> -->
 </div>
