@@ -30,12 +30,15 @@ export default {
             switch (type) {
                 case 'img':
                     file = this.$refs.img.files[0];
+                    this.$refs.img.value = null;
                     break;
                 case 'audio':
                     file = this.$refs.audio.files[0];
+                    this.$refs.audio.value = null;
                     break;
                 case 'video':
                     file = this.$refs.video.files[0];
+                    this.$refs.video.value = null;
                     break;
                 default:
                     break;
